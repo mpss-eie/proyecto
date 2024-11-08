@@ -1,0 +1,793 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../procesamiento/">
+      
+      
+      <link rel="icon" href="../img/plot.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Recopilación - Proyecto de Programación de Modelos Probabilísticos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#recopilacion-y-almacenamiento-de-datos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Proyecto de Programación de Modelos Probabilísticos" class="md-header__button md-logo" aria-label="Proyecto de Programación de Modelos Probabilísticos" data-md-component="logo">
+      
+  <img src="../img/plot.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto de Programación de Modelos Probabilísticos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Recopilación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Recopilación
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../procesamiento/" class="md-tabs__link">
+        
+  
+    
+  
+  Procesamiento
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../modelos/" class="md-tabs__link">
+        
+  
+    
+  
+  Modelos
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../instrucciones/" class="md-tabs__link">
+        
+  
+    
+  
+  Instrucciones
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../atributos/" class="md-tabs__link">
+        
+  
+    
+  
+  Atributos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Proyecto de Programación de Modelos Probabilísticos" class="md-nav__button md-logo" aria-label="Proyecto de Programación de Modelos Probabilísticos" data-md-component="logo">
+      
+  <img src="../img/plot.png" alt="logo">
+
+    </a>
+    Proyecto de Programación de Modelos Probabilísticos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Recopilación
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Recopilación
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#y-de-donde-vienen-estos-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Y de dónde vienen estos datos?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Y de dónde vienen estos datos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelos-de-comunicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelos de comunicación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#donde-son-almacenados-los-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Dónde son almacenados los datos?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Dónde son almacenados los datos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos-relacionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bases de datos relacionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-haremos-en-el-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué haremos en el proyecto?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué haremos en el proyecto?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datos-desde-fuentes-externas-con-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datos desde fuentes externas con API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recoleccion-periodica-de-datos-con-un-planificador-de-tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recolección periódica de datos con un planificador de tareas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrador-de-tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administrador de tareas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Administrador de tareas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planificador-de-tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planificador de tareas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intermediador-de-mensajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intermediador de mensajes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bases-de-datos-e-interfaces-orm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bases de datos e interfaces ORM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../procesamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Procesamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instrucciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../atributos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atributos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="recopilacion-y-almacenamiento-de-datos">Recopilación y almacenamiento de datos</h1>
+<p>El análisis de datos comienza con la <em>recopilación</em> de datos. Podríamos separar la recopilación en dos grandes paradigmas:</p>
+<ul>
+<li><strong>Procesamiento por lotes</strong> (<em>batch processing</em>): consiste en la recolección de una gran cantidad de datos históricos, típicamente una sola vez, o con una frecuencia tan baja que cada recopilación tiene una gran cantidad de datos. Ejemplos: los "famosos" datos de pasajeros del Titanic, los cuales necesariamente fueron recolectados una sola vez, o la información que utiliza YouTube o Netflix para entrenar sus sistemas de recomendaciones que, aunque son actualizados aproximadamente cada 24 horas, contienen millones de nuevas interacciones.</li>
+<li><strong>Procesamiento en tiempo real</strong> (<em>real-time processing</em>): consiste en la recolección de datos al momento de su ocurrencia, esto es, basado en eventos (<em>event-driven</em>) o con una frecuencia de recopilación tan alta que solamente algunos pocos nuevos datos, o ninguno, son obtenidos en cada muestreo. Ejemplos: datos sobre terremotos, mercados de valores o de redes de sensores recopilados cada 10 segundos.</li>
+</ul>
+<p>En medio de ambos hay una "zona gris" a menudo llamada <strong>procesamiento en tiempo casi real</strong> (<em>quasi real-time processing</em>) que captura la dinámica del sistema sin responder directamente a eventos o a una altísima frecuencia. Ejemplos: telemetría y rastreo en vehículos de transporte público, que actualizan datos cada 15 o 20 segundos, lo suficiente para tener una buena estimación de su posición, pero no totalmente "en tiempo real".</p>
+<p>La definición varía según el fenómeno analizado, que puede tener cambios muy frecuentes o no.</p>
+<div class="admonition note">
+<p class="admonition-title">Definición informal de procesamiento en tiempo real</p>
+<p>Un flujo de datos en el cual el procesamiento de una nueva muestra inicia en el momento de su llegada y concluye antes de la llegada de la siguiente muestra o evento es un procesamiento en tiempo real.</p>
+</div>
+<h3 id="y-de-donde-vienen-estos-datos">¿Y de dónde vienen estos datos?</h3>
+<p>Los datos pueden venir de un solo archivo (ejemplo, un <code>.xlsx</code> o <code>.csv</code>), directamente de un sensor (ejemplo, un Arduino con un sensor de temperatura conectado a la computadora), o de una base de datos externa, siguiendo varios <em>modelos de comunicación</em> posibles, explicados a continuación.</p>
+<h4 id="modelos-de-comunicacion">Modelos de comunicación</h4>
+<p>Algunos de los modelos de comunicación para compartir datos entre sistemas son:</p>
+<ul>
+<li><strong>Solicitud/respuesta</strong>: donde una <em>solicitud</em> del <em>cliente</em> interactúa con los <em>recursos</em> de un <em>servidor</em> que devuelve una <em>respuesta</em>. Ejemplo: HTTP (el famoso "404 Not Found") o las interfaces de programación de aplicaciones web (API, <em>Application Programming Interface</em>) que operan sobre HTTP y conectan distintos servicios. </li>
+<li><strong>Publicación/suscripción</strong>: donde un <em>productor</em> <em>publica</em> un <em>mensaje</em> que coloca en un <em>canal</em> sobre un <em>tópico</em> y un <em>intermediador de mensajes</em> lo distribuye a todos los procesos que están <em>suscritos</em>. Ejemplo: el monitoreo de eventos en la agricultura de precisión con una red de sensores conectada con <a href="https://mqtt.org/">MQTT</a>. </li>
+<li><strong>WebSockets</strong>: donde hay un canal de comunicación <em>bidireccional</em> con comunicación <em>persistente</em>. Ejemplo: cualquier aplicación de chat (WhatsApp, Telegram, etc.) o videojuegos en línea. A diferencia de los WebSockets, HTTP es una conexión no persistente.</li>
+<li>Otros</li>
+</ul>
+<p>Una de las soluciones más populares es obtener datos de fuentes externas, y hacerlo por medio de una interfaz de programación de aplicaciones (API). Ver sección más adelante.</p>
+<h3 id="donde-son-almacenados-los-datos">¿Dónde son almacenados los datos?</h3>
+<p>Luego, el análisis de datos típicamente continúa con el almacenamiento de datos después de la recopilación. Las bases de datos ofrecen almacenamiento permanente y son una solución en el caso de grandes cantidades de datos.</p>
+<p><strong>Nota</strong>: no siempre es necesario almacenar los datos de esta forma. A menudo es suficiente hacer el análisis de los datos y luego descartarlos.</p>
+<p>Hay distintos tipos de bases de datos y las bases de datos relacionales son las más comunes.</p>
+<h4 id="bases-de-datos-relacionales">Bases de datos relacionales</h4>
+<p>Son datos <em>tabulares</em> -y por tanto "planos" y "no anidados"- en tablas con columnas, también llamadas <em>campos</em> (<em>fields</em>), y filas, también llamadas <em>registros</em> (<em>records</em>). Cada tabla tiene una <em>llave primaria</em> (PK, <em>primary key</em>) que identifica de forma única cada registro. Las tablas están relacionadas entre sí (de ahí el nombre <em>relacional</em>) con <em>llaves foráneas</em> (FK, <em>foreign key</em>) que hacen referencia a un registro de otra tabla, creando una estructura lógica entre las tablas de una misma base de datos.</p>
+<p>En el siguiente <em>diagrama entidad-relación</em> (ERD) simplificado, una tabla tiene datos de estudiantes, otra tabla tiene datos de los cursos y una tercera tabla que vincula cursos con estudiantes (relación muchos-a-muchos, <em>many-to-many</em>) con llaves foráneas a las dos tablas anteriores.</p>
+<pre class="mermaid"><code>---
+title: Ejemplo de base de datos
+---
+erDiagram
+    ESTUDIANTE }o--o{ MATRICULA : matricula
+    ESTUDIANTE {
+        string estudiante_id PK
+        string nombre
+        int edad
+        float promedio
+    }
+    CURSO {
+        string curso_id PK
+        string nombre
+    }
+    MATRICULA }o--o{ CURSO : matricula
+    MATRICULA {
+        string estudiante_id FK
+        string curso_id FK
+        integer ciclo
+    }</code></pre>
+<p>Las bases de datos relacionales más utilizadas son tipo SQL (<em>Structured Query Language</em>), que utilizan un lenguaje especial para hacer consultas a la base de datos. Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">estudiantes</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B00000</span><span class="p">;</span>
+</code></pre></div>
+<p>devuelve los datos <code>nombre</code> y <code>edad</code> (pero no <code>promedio</code>) del carné B00000 en la tabla <code>estudiantes</code>.</p>
+<p>En general, las bases de datos tienen <em>transacciones</em> del tipo: lectura, creación, actualización y eliminación de registros (CRUD, <em>Create</em>, <em>Read</em>, <em>Update</em>, <em>Delete</em>).</p>
+<p>Los sistemas de administración de bases de datos (DBMS, <em>Data Base Management System</em>) más populares son PostgreSQL, SQLite3, MySQL, MariaDB, Oracle y otros.</p>
+<h2 id="que-haremos-en-el-proyecto">¿Qué haremos en el proyecto?</h2>
+<p>Para este proyecto haremos una recopilación de datos en <strong>tiempo <em>casi</em> real</strong> de fuentes externas con un <strong>web API</strong> y lo haremos de forma periódica, utilizando un administrador y planificador de tareas, para almacenarlos en una <strong>base de datos relacional</strong>.</p>
+<p>A continuación hay una ampliación de estos conceptos.</p>
+<h3 id="datos-desde-fuentes-externas-con-api">Datos desde fuentes externas con API</h3>
+<p>En el <strong>PyX</strong> <a href="https://github.com/fabianabarca/python">número 6</a> hay una explicación más amplia sobre los web API y el uso del paquete <code>requests</code> de Python.</p>
+<p>Hay una gran cantidad de API públicos disponibles en <a href="https://publicapis.dev/">Public APIs</a>.</p>
+<h3 id="recoleccion-periodica-de-datos-con-un-planificador-de-tareas">Recolección periódica de datos con un planificador de tareas</h3>
+<p>En Python es posible utilizar el paquete <a href="https://docs.celeryq.dev/en/stable/index.html">Celery</a> como administrador de tareas (<em>task manager</em>) y como un planificador de tareas (<em>task scheduler</em>) que "calendariza" tareas en frecuencias especificadas como "cada 60 segundos" o según otros criterios, como "el primer lunes del mes" o "al anochecer".</p>
+<p>Por tanto, para un flujo de procesamiento de datos en tiempo real o en tiempo <em>casi</em> real podemos usar Celery para recopilar datos de forma continua y periódica. Hay más detalles a continuación.</p>
+<h3 id="administrador-de-tareas">Administrador de tareas</h3>
+<p><strong>Celery Worker</strong> administra la ejecución de tareas de forma <em>asincrónica</em> entre los "trabajadores" (<em>workers</em>) disponibles. Un "trabajador" puede ser simplemente un núcleo de la computadora local que está libre para ejecutar una tarea o puede ser un servidor remoto en una configuración más compleja, por ejemplo.</p>
+<p>"Asincrónico" significa que las tareas no bloquean unas a otras. Por ejemplo: en un flujo "sincrónico" de tareas, una tarea es ejecutada solamente hasta que la anterior haya sido terminada. En el contexto de un administrador de tareas como Celery Worker, un flujo de tareas asincrónico permite que múltiples tareas sean ejecutadas en paralelo, sin esperar a que las tareas anteriores estén completas. Celery Worker estará a cargo de "vigilar" la cola de ejecución de las tareas y reportar sus resultados.</p>
+<h4 id="planificador-de-tareas">Planificador de tareas</h4>
+<p><strong>Celery Beat</strong> define los momentos en que las tareas son ejecutadas, es decir, es un "calendarizador" o "planificador" (<em>scheduler</em>). Esto es útil para crear tareas en un periodo de tiempo definido como, por ejemplo, "cada 15 segundos" o "cada 12 horas" o "todos los días a las 2:00 am" o "el segundo miércoles de cada mes", e inclusive con base en eventos solares, como "al amanecer" o "al mediodía" (que varía según la ubicación en el planeta y la época del año).</p>
+<h4 id="intermediador-de-mensajes">Intermediador de mensajes</h4>
+<p>Cuando es necesaria la comunicación entre procesos en una computadora, es necesario un <strong>intermediador de mensajes</strong> (<em>message broker</em>) para entregar el mensaje, pues los procesos no pueden comunicarse entre sí directamente.</p>
+<p><a href="https://redis.io/">Redis</a> es un intermediador de mensajes popular que permite varios modelos de comunicación, como publicación/suscripción. </p>
+<p>Redis tiene integración con Celery, y es necesario para el envío de la asignación de las tareas periódicas desde el planificador (Celery Beat) hasta el trabajador (Celery Worker).</p>
+<h3 id="bases-de-datos-e-interfaces-orm">Bases de datos e interfaces ORM</h3>
+<p>El uso de bases de datos es un área compleja y especializada, sin embargo, hay herramientas en Python que facilitan su gestión.</p>
+<p>En particular, la recomendación es utilizar un mapeador relacional de objetos (ORM, <em>Object-Relational Mapping</em>), que representa las tablas y sus datos como una <em>clase</em> en un lenguaje de programación, habilitando la interacción con la base de datos con el paradigma orientado a objetos, y abstrayendo la especificidad de distintas bases de datos utilizadas.</p>
+<p>En Python existe <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>, un poderoso paquete para interactuar con los DBMS más populares.</p>
+<p>El ejemplo de la tabla de datos de estudiantes, cursos y matrícula mostrados anteriormente, puede ser implementado de la siguiente forma.</p>
+<div class="highlight"><span class="filename">Definición de modelos de la base de datos</span><pre><span></span><code><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span><span class="p">,</span> <span class="n">Column</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">,</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">Float</span><span class="p">,</span> <span class="n">String</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.ext.declarative</span> <span class="kn">import</span> <span class="n">declarative_base</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
+
+<span class="c1"># Crear la clase base de cada tabla</span>
+<span class="n">Base</span> <span class="o">=</span> <span class="n">declarative_base</span><span class="p">()</span>
+
+
+<span class="c1"># Definir los modelos</span>
+<span class="k">class</span> <span class="nc">Estudiante</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;estudiantes&quot;</span>
+
+    <span class="n">estudiante_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+    <span class="n">edad</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">)</span>
+    <span class="n">promedio</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Float</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Curso</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span><span class="p">:</span> <span class="o">=</span> <span class="s2">&quot;cursos&quot;</span>
+
+    <span class="n">curso_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">nombre</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Matricula</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;matriculas&quot;</span>
+
+    <span class="n">estudiante_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;estudiantes.estudiante_id&quot;</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">curso_id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="s2">&quot;cursos.curso_id&quot;</span><span class="p">),</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ciclo</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Definir relación de matrícula con los modelos de estudiante y curso</span>
+    <span class="n">estudiante</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Estudiante&quot;</span><span class="p">)</span>
+    <span class="n">curso</span> <span class="o">=</span> <span class="n">relationship</span><span class="p">(</span><span class="s2">&quot;Curso&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Aquí fueron creadas las tres tablas, donde <code>matriculas</code> hace referencia por medio de llaves foráneas a las llaves primarias <code>estudiantes.estudiante_id</code> y <code>cursos.curso_id</code>. En esta misma tabla nótese también que las tres columnas tienen <code>primary_key=True</code>, lo que indica una <em>llave primaria compuesta</em>, para lo cual cada registro debe tener una <em>combinación única</em> de estudiante, curso y ciclo lectivo.</p>
+<p>Finalmente, hay que crear las tablas estableciendo un <code>engine</code> o referencia a la base de datos a utilizar (en este caso SQLite3) y crear una <em>sesión</em> ligada a ese <code>engine</code>, para poder ejectuar las transacciones deseadas.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Crear la conexión a la base de datos SQLite3</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;sqlite:///</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">Session</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
+
+<span class="c1"># Crear la(s) tabla(s) en la base de datos</span>
+<span class="n">Base</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">create_all</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
+</code></pre></div>
+<p>En este proyecto no está determinado un mecanismo fundamental de <em>migraciones</em>, que son necesarias para el caso, completamente usual, en el que hay que realizar una actualización en la base de datos cuando hay cambios en los modelos (<em>clases</em>), conservando al mismo tiempo los datos ya almacenados. Por ejemplo, para cambiar el tipo de dato de <code>estudiante_id</code> de <code>String</code> a <code>Integer</code> hay que hacer una migración. <a href="https://alembic.sqlalchemy.org/en/latest/">Alembic</a> es la forma de hacerlo con SQLAlchemy, pero no está dentro de los alcances del proyecto.</p>
+<p>Para el proyecto la recomendación es utilizar SQLite o PostgreSQL. Una diferencia básica entre ambos es que SQLite3 existe como un archivo binario (por ejemplo, <code>db.sqlite3</code> o <code>data.db</code>) mientras que PostgreSQL es un programa propiamente, instalado en la computadora o servidor. Para proyectos de gran escala PostgreSQL es recomendado, sin embargo SQLite3 tiene capacidad para manejar cientos de millones de datos, así que en nuestro proyecto no es un problema. Quizá hay que tener más cuidado de no borrar el archivo "de un dedazo".</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tooltips", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
